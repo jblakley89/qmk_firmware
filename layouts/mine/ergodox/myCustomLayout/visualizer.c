@@ -18,7 +18,7 @@
 #include "lcd_keyframes.h"
 #include "lcd_backlight_keyframes.h"
 
-enum ergodox_layers { _QWERTY, _FUNCTIONS, _NUMPAD, _GAMING, _COLEMAK };
+enum ergodox_layers { _QWERTY, _COLEMAK, _FUNCTIONS, _NUMPAD, _GAMING };
 
 // This function should be implemented by the keymap visualizer
 // Don't change anything else than state->target_lcd_color and state->layer_text as that's the only thing
@@ -58,6 +58,6 @@ static void get_visualizer_layer_and_color(visualizer_state_t* state) {
     }
 
     if (state->status.leds & (1u << USB_LED_CAPS_LOCK)) {
-      state->target_lcd_color = LCD_COLOR(190, saturation, brightness);
+      state->target_lcd_color = LCD_COLOR(190, 200, brightness);
     }
 }
