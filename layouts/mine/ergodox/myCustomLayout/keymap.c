@@ -21,7 +21,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /******* COLMAK Layer ********************************************************************************************************
    *
    * ,---------------------------------------------------.           ,---------------------------------------------------.
-   * |    `    |   1  |   2  |   3  |   4  |   5  | L(G) (|           |L(QWR)|   6  |   7  |   8  |   9  |   0  |    -_   |
+   * |    `    |   1  |   2  |   3  |   4  |   5  | L(G) |           |L(QWR)|   6  |   7  |   8  |   9  |   0  |    -_   |
    * |---------+------+------+------+------+-------------|           |------+------+------+------+------+------+---------|
    * |   Tab   |   Q  |   W  |   F  |   P  |   G  |  {[  |           |  ]}  |   J  |   L  |   U  |   Y  |   ;  |    \|   |
    * |---------+------+------+------+------+------|      |           |      |------+------+------+------+------+---------|
@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                     KC_END,	  KC_K,   KC_M,		KC_COMM,KC_DOT,	KC_SLSH,  KC_LSFT,
                                                                                       KC_LEFT,KC_UP,	KC_DOWN,KC_RGHT,  LT(_SYM,KC_EQL),
 
-                                                                    KC_NO,	KC_NO,
+                                                                    KC_NO,	KC_APP,
                                                                     KC_NO,
                                                                     KC_NO,	KC_ENT,		KC_BSPC
 		),
@@ -102,7 +102,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                     KC_END,		KC_N,		KC_M,		KC_COMM,KC_DOT,	KC_SLSH,KC_LSFT,
                                                                                       KC_LEFT,KC_UP,	KC_DOWN,KC_RGHT,LT(_SYM,KC_EQL),
 
-                                                                    KC_NO,	KC_NO,
+                                                                    KC_NO,	KC_APP,
                                                                     KC_NO,
                                                                     KC_NO,	KC_ENT,		KC_BSPC
                                                                     ),
