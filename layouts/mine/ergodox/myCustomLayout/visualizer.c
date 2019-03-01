@@ -18,8 +18,13 @@
 #include "lcd_keyframes.h"
 #include "lcd_backlight_keyframes.h"
 
-enum ergodox_layers { _QWERTY, _COLEMAK, _FUNCTIONS, _NUMPAD, _GAMING };
-
+enum ergodox_layers {
+  _COL,
+  _QWR,
+  _SYM,
+  _NAV,
+  _GAM
+  };
 // This function should be implemented by the keymap visualizer
 // Don't change anything else than state->target_lcd_color and state->layer_text as that's the only thing
 // that the simple_visualizer assumes that you are updating
@@ -33,26 +38,31 @@ static void get_visualizer_layer_and_color(visualizer_state_t* state) {
     lcd_backlight_brightness(255);
 
     switch(layer){
-        case _QWERTY:
-          state->layer_text = "QWERTY";
+        case _COL:
+          state->layer_text = "Colmak";
           state->target_lcd_color = LCD_COLOR(0, saturation, 0);
           break;
-        case _FUNCTIONS:
-          state->layer_text = "FUNCTION";
+
+        case _QWR:
+          state->layer_text = "QWERTY";
+          state->target_lcd_color = LCD_COLOR(35, 200, brightness);
+          break;
+
+        case _SYM:
+          state->layer_text = "Symbols";
           state->target_lcd_color = LCD_COLOR(0, saturation, brightness);
           break;
-        case _NUMPAD:
-          state->layer_text = "NUMPAD";
+
+        case _NAV:
+          state->layer_text = "Navigation";
           state->target_lcd_color = LCD_COLOR(150, saturation, brightness);
           break;
-        case _GAMING:
-          state->layer_text = "GAMING";
+
+        case _GAM:
+          state->layer_text = "Gaming";
           state->target_lcd_color = LCD_COLOR(84, saturation, brightness);
           break;
-        case _COLEMAK:
-          state->layer_text = "COLEMAK";
-          state->target_lcd_color = LCD_COLOR(40, saturation, brightness);
-          break;
+
         default:
           state->layer_text = "NONE";
     }
